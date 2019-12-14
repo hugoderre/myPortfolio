@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import './header.css'
 import profilePicture from '../img/photocv.png'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 
 function PhotoCV(props) {
-    return <img className="profile-picture mx-auto" alt="my-epic-profile" src={profilePicture} />
+    return <img className={props.className} alt={props.alt} src={props.srcImg} />
 }
 
 export default class Header extends Component {
@@ -15,17 +12,15 @@ export default class Header extends Component {
 
         return (
         
-        <Container fluid >
-            <Row >
-                <Col> 
-                    
-                    <PhotoCV />
+        <div class="contrainer-fluid">
+
+            <div className="row">
+                <div className="col">  
+                    <PhotoCV srcImg={profilePicture} className="profile-picture mx-auto" alt="my-epic-profile"/>
                     <h1 className="text-center">Développeur Web</h1>
-                    
-                </Col>
-                
-            </Row>
-        </Container>
+                </div>
+            </div>
+        </div>
         
         )
     }
