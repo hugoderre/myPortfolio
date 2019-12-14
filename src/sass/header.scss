@@ -1,8 +1,14 @@
 @import "variables" ;
 .profile-picture {
-    display:block;
     width:150px;
-    box-shadow: 3px 3px $red, -1em 0 .4em $blue;
-    border-radius:80px;
+    height: 200px;
+   
+}
+.wrap-img {
+    width:150px;
+    height: 170px;
+    overflow: hidden;
+    margin:auto;
+    border-radius: 100px;
 }
 

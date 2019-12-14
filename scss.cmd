@@ -1,0 +1,1 @@
+sass --watch src/sass/header.scss:src/components/header/header.css

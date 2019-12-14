@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import CV from 'cv'
+import CV from './cv'
+import Projects from './projects'
 
 export default class Sections extends Component {
     render() {
         return (
-            <div className="row">
-                <div className="col-md-6 col-sm-12"></div>
+            <section className="row">
+                <article className="col-md-6 col-sm-12 text-center">
                     <CV />
-                <div>
-                <div className="col-md-6 col-sm-12"></div>
+                </article>
+                <article className="col-md-6 col-sm-12 text-center">
                     <Projects />
-                <div>
-            </div>
+                </article>
+            </section>
         )
     }
 }

@@ -6,8 +6,10 @@ import Sections from './sections/wrapperSections'
 class App extends Component {
     render() {
         return (
-            <Header />
-            <Sections />
+            <div className="container-fluid">
+                <Header />
+                <Sections />
+            </div>
         )
     }
 }
