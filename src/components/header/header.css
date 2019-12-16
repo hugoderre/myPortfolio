@@ -9,4 +9,31 @@
   margin: auto;
   border-radius: 100px; }
 
+.navbar {
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  display: block !important; }
+
+.s-m a {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  background: #2c3e50;
+  color: white !important;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none !important;
+  font-size: 24px; }
+
+.s-m a:hover {
+  background: #e67e22; }
+
+.s-m a i {
+  transition: 0.4s all; }
+
+.s-m a:hover > i {
+  transform: scale(1.6) rotate(25deg); }
+
 /*# sourceMappingURL=header.css.map */
