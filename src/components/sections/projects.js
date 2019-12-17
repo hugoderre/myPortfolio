@@ -1,11 +1,11 @@
 import React from 'react'
+import './projects.css'
 
-// RETROUVER LE CHEMIN D'UNE IMAGE
-// function importAll(r) {
-//     return r.keys().map(r);
-//   }
-// const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
-// console.log(images)
+function importAll(r) {
+    return r.keys().map(r);
+  }
+importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
+
 
 const projectsData = [
     {
@@ -61,23 +61,28 @@ const projectsData = [
 
 function Card(props) {
     return (
-        <div className="card">
+    
+        <div className="card col-lg-4 col-md-6 col-sm-12">
             <img src={props.data.srcImg} className="card-img-top" alt=""></img>
             <div className="card-body">
                 <h5 className="card-title">{props.data.title}</h5>
                 <p className="card-text">{props.data.description}</p>
-                <a href={props.data.url} className="btn btn-primary">Voir</a>
+                <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}. </span>)}</p>
+                <a href={props.data.url} className="btn btn-primary btn-card">Voir</a>
             </div>
         </div>
+    
     )
 }
 
 export default function Projects() {
     return (
         <div className="container">
-            {projectsData.map((project, index) =>
-                <Card key={project.title + '-' + index} data={projectsData[index]}/>
-            )}
+            <div className="row">
+                {projectsData.map((project, index) =>
+                    <Card key={project.title + '-' + index} data={projectsData[index]}/>
+                )}
+            </div>
         </div>
     )
 }

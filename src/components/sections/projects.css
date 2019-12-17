@@ -1,0 +1,9 @@
+.card {
+    position: relative !important;
+}
+.btn-card {
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
