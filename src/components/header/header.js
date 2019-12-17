@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import './header.css'
-import profilePicture from '../img/photocv.png'
 
-
-function PhotoCV(props) {
-    return <div className="wrap-img"><img className={props.className} alt={props.alt} src={props.srcImg} /></div>
-}
 
 export default class Header extends Component {
     render() {
@@ -19,13 +14,9 @@ export default class Header extends Component {
                     </div>
                     <div className="col-6">
                         <div className="mb-0 text-center d-block s-m">
-                        
-                            <a href="#"><i className="btn-sm fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="btn-sm fab fa-twitter"></i></a>
-                            <a href="#"><i className="btn-sm fab fa-google-plus-g"></i></a>
-                            <a href="#"><i className="btn-sm fab fa-youtube"></i></a>
-                            <a href="#"><i className="btn-sm fab fa-instagram"></i></a>
-                            
+                            <a href="https://www.linkedin.com/in/hugo-derr%C3%A9-a3144017b/" target="_blank" rel="noopener noreferrer"><i className="btn-sm fab fa-linkedin"></i></a>
+                            <a href="https://twitter.com/DevGohu" target="_blank" rel="noopener noreferrer"><i className="btn-sm fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/gohuuuu/" target="_blank" rel="noopener noreferrer"><i className="btn-sm fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

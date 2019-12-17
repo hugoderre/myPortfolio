@@ -1,4 +1,5 @@
-body {
-    height: 100vh;
-    background: linear-gradient(0.25turn,#e66465, #9198e5);
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl  {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }

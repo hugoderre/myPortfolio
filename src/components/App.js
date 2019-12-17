@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import Header from './header/header'
-import Sections from './sections/wrapperSections'
+import Sections from './sections/sections'
 
 class App extends Component {
     render() {

@@ -1,17 +1,4 @@
-.profile-picture {
-  width: 150px;
-  height: 200px; }
-
-.wrap-img {
-  width: 150px;
-  height: 170px;
-  overflow: hidden;
-  margin: auto;
-  border-radius: 100px; }
-
 .navbar {
-  margin-left: -20px !important;
-  margin-right: -20px !important;
   display: block !important; }
 
 .s-m a {
