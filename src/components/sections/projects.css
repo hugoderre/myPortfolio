@@ -1,9 +1,11 @@
-.card {
-    position: relative !important;
-}
 .btn-card {
     position:absolute;
     bottom: 0px;
-    right: 0px;
+    right: 45%;
+    margin-bottom:10px;
+}
+.card {
+    height: 500px;
+    margin-top:10px;
 }
 
