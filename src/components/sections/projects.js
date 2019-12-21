@@ -2,6 +2,7 @@ import React from 'react'
 import './projects.css'
 import images from './images'
 
+
 // function importAll(r) {
 //     return r.keys().map(r);
 //   }
@@ -60,25 +61,44 @@ const projectsData = [
     }
 ]
 
+const ColoredLine = ({ color }) => (
+    <hr
+        style={{
+            color: color,
+            backgroundColor: color,
+            height: .5
+        }}
+    />
+);
+
 function Card(props) {
     return (
-    <div className="col-md-4 col-sm-6 col-12">
-        <div className="card ">
-            <img src={props.data.srcImg} className="card-img-top" alt=""></img>
-            <div className="card-body">
-                <h5 className="card-title">{props.data.title}</h5>
-                <p className="card-text">{props.data.description}</p>
-                <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}. </span>)}</p>
-                <a href={props.data.url} className="btn btn-primary btn-card" target="_blank" rel="noopener noreferrer">Voir</a>
+        <div className="fadeIn">
+        <div className="card mb-3">
+            <div className="row no-gutters">
+                <div className="col-md-4">
+                    <img src={props.data.srcImg} className="card-img-top" alt=""></img> 
+                </div>
+                <div className="col-md-8">
+                    <div className="card-body">
+                        <h5 className="card-title">{props.data.title}</h5>
+                        <p className="card-text">{props.data.description}</p>
+                        <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}. </span>)}</p>
+                        <a href={props.data.url} className="btn btn-primary btn-card" target="_blank" rel="noopener noreferrer">Voir</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        </div>
     )
 }
 
 export default function Projects() {
     return (
         <div className="container">
+            <ColoredLine color="black" />
+            <h2 className="text-center">Mes projets d'étude</h2>
+            <ColoredLine color="black" />
             <div className="row row-cards">
                 {projectsData.map((project, index) =>
                     <Card key={project.title + '-' + index} data={projectsData[index]}/>
