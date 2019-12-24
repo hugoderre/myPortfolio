@@ -61,15 +61,15 @@ const projectsData = [
     }
 ]
 
-const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: .5
-        }}
-    />
-);
+// const ColoredLine = ({ color }) => (
+//     <hr
+//         style={{
+//             color: color,
+//             backgroundColor: color,
+//             height: .5
+//         }}
+//     />
+// );
 
 function Card(props) {
     return (
@@ -83,7 +83,7 @@ function Card(props) {
                     <div className="card-body">
                         <h5 className="card-title">{props.data.title}</h5>
                         <p className="card-text">{props.data.description}</p>
-                        <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}. </span>)}</p>
+                        <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}.</span>)}</p>
                         <a href={props.data.url} className="btn btn-primary btn-card" target="_blank" rel="noopener noreferrer">Voir</a>
                     </div>
                 </div>
@@ -96,9 +96,6 @@ function Card(props) {
 export default function Projects() {
     return (
         <div className="container">
-            <ColoredLine color="black" />
-            <h2 className="text-center">Mes projets d'étude</h2>
-            <ColoredLine color="black" />
             <div className="row row-cards">
                 {projectsData.map((project, index) =>
                     <Card key={project.title + '-' + index} data={projectsData[index]}/>
