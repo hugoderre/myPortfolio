@@ -9,15 +9,14 @@
  * http://www.script-tutorials.com/
  */
 // get random color
-// function getRandomColor() {
-//     var letters = '0123456789ABCDEF'.split('');
-//     var color = '#FFFFFF';
-//     for (var i = 0; i < 6; i++ ) {
-//         color += letters[Math.round(Math.random() * 15)];
-//     }
-//     return color;
-// }
-
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return '#' + color;
+}
 // prepare object
 function prepareObject(o) {
     o.colors = [];
@@ -27,7 +26,7 @@ function prepareObject(o) {
     for (var i = 0; i < o.faces.length; i++) {
         o.normals[i] = [0, 0, 0];
 
-        o.colors[i] = '#000000';
+        o.colors[i] = "#000000";
     }
 
     // prepare centers: calculate max positions
@@ -214,7 +213,7 @@ var vAlpha = 0.5;
 var vShiftX = 0;
 var vShiftY = 0;
 var distance = -700;
-var vMouseSens = 0.05;
+// var vMouseSens = 0.05;
 var iHalfX, iHalfY;
 
 // initialization
@@ -241,15 +240,15 @@ function sceneInit() {
 
 
 // onMouseMove event handler
-function handleMousemove(e) {
-    var x = e.pageX - canvas.offsetLeft;
-    var y = e.pageY - canvas.offsetTop;
+// function handleMousemove(e) {
+//     var x = e.pageX - canvas.offsetLeft;
+//     var y = e.pageY - canvas.offsetTop;
     
-    if ((x > 0) && (x < canvas.width) && (y > 0) && (y < canvas.height)) {
-        vShiftY = vMouseSens * (x - iHalfX) / iHalfX;
-        vShiftX = vMouseSens * (y - iHalfY) / iHalfY;
-    }
-}
+//     if ((x > 0) && (x < canvas.width) && (y > 0) && (y < canvas.height)) {
+//         vShiftY = vMouseSens * (x - iHalfX) / iHalfX;
+//         vShiftX = vMouseSens * (y - iHalfY) / iHalfY;
+//     }
+// }
 
 // draw main scene function
 function drawScene() {
