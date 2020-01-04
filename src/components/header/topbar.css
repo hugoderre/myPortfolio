@@ -1,3 +1,10 @@
+/* .nav-name {
+  font-family: 'Six Caps', sans-serif;
+  font-weight: 300!important;
+  font-size:50px!important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+} */
 .navbar {
   display: block !important; 
   

@@ -10,13 +10,13 @@
     margin: 20px auto 0;
     position: relative;
 }
-.container-titles {
-    margin: auto;
-    width:500px;
-    font-size: 20px;
+.presentation .container {
+    max-width: 680px!important;
+    margin-top:20px;
 }
-a:hover {
-    border:1px solid black;
-    transition: 2s;
-    animation: fadein 2s;
+.title-item {
+    padding-right: 0!important;
+    padding-left: 0!important;
 }
+
+

@@ -26,10 +26,10 @@ export default function TopBar() {
         <nav className="navbar navbar-dark bg-dark">
             <div className="row test">
                 <div className="col-6">
-                    <span className="navbar-brand mb-0 ml-5 h1">HUGO DERRÉ</span>
+                    <span className="navbar-brand mb-0 ml-5 h1 nav-name">HUGO DERRE</span>
                 </div>
                 <div className="col-6">
-                    <div className="mb-0 text-center d-block s-m">
+                    <div className="mb-0 text-right d-block s-m">
                         {socialItems.map((item, index) => 
                         <SocialMedias key={index} link={item.link} icon={item.icon} />
                         )}
