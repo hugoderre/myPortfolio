@@ -20,10 +20,10 @@
 
 // prepare object
 function prepareObject(o) {
-    o.colors = new Array();
+    o.colors = [];
 
     // prepare normals
-    o.normals = new Array();
+    o.normals = [];
     for (var i = 0; i < o.faces.length; i++) {
         o.normals[i] = [0, 0, 0];
 
@@ -32,15 +32,15 @@ function prepareObject(o) {
 
     // prepare centers: calculate max positions
     o.center = [0, 0, 0];
-    for (var i = 0; i < o.points.length; i++) {
+    for (i = 0; i < o.points.length; i++) {
         o.center[0] += o.points[i][0];
         o.center[1] += o.points[i][1];
         o.center[2] += o.points[i][2];
     }
 
     // prepare distances
-    o.distances = new Array();
-    for (var i = 1; i < o.points.length; i++) {
+    o.distances = [];
+    for (i = 1; i < o.points.length; i++) {
         o.distances[i] = 0;
     }
 
@@ -89,7 +89,7 @@ function triangle() {
 
 
 function getRotationPar(center, vector, t) {
-    var result = new Array();
+    var result = [];
 
     var u_u = vector[0] * vector[0];
     var v_v = vector[1] * vector[1];
@@ -199,7 +199,7 @@ function rotateObj(parametri1, parametri2, obj) {
 }
 
 function project(distance, point, x, y) {
-    var result = new Array();
+    var result = [];
 
     result[0] = point[0] * distance / point[2] + x;
     result[1] = y - point[1] * distance / point[2];
@@ -220,7 +220,7 @@ var iHalfX, iHalfY;
 // initialization
 function sceneInit() {
     // prepare canvas and context objects
-    canvas = document.getElementById('scene');
+    canvas = document.getElementById('scene-canvas');
     ctx = canvas.getContext('2d');
     iHalfX = canvas.width / 2;
     iHalfY = canvas.height / 2;
@@ -231,8 +231,9 @@ function sceneInit() {
     translateObj([0, 0, -1000], obj);
     // attach event handler
     
-    vShiftX = 0.003;
-    canvas.addEventListener("mousemove", handleMousemove, false);
+    vShiftX = 0.008;
+    vShiftY = 0.003;
+    // canvas.addEventListener("mousemove", handleMousemove, false);
 
     // main scene loop
     setInterval(drawScene, 25);
@@ -275,8 +276,8 @@ function drawScene() {
 
     // prepare array with face triangles (with calculation of max distance for every face)
     var iCnt = 0;
-    var aFaceTriangles = new Array();
-    for (var i = 0; i < obj.faces_number; i++) {
+    var aFaceTriangles = [];
+    for (i = 0; i < obj.faces_number; i++) {
         var max = obj.distances[obj.faces[i][0]];
         for (var f = 1; f < obj.faces[i].length; f++) {
             if (obj.distances[obj.faces[i][f]] > max)
@@ -287,13 +288,13 @@ function drawScene() {
     aFaceTriangles.sort(sortByDistance);
 
     // prepare array with projected points
-    var aPrjPoints = new Array();
-    for (var i = 0; i < obj.points.length; i++) {
+    var aPrjPoints = [];
+    for (i = 0; i < obj.points.length; i++) {
         aPrjPoints[i] = project(distance, obj.points[i], iHalfX, iHalfY);
     }
 
     // draw an object (surfaces)
-    for (var i = 0; i < iCnt; i++) {
+    for (i = 0; i < iCnt; i++) {
 
         ctx.fillStyle = aFaceTriangles[i].faceColor;
 
