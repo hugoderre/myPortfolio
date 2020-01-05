@@ -2,11 +2,7 @@ import React from 'react'
 import images from './images'
 
 
-// function importAll(r) {
-//     return r.keys().map(r);
-//   }
-// const images = importAll(require.context('../img', false, /\.(png|jpe?g|svg)$/));
-// console.log(images)
+// POUR LES PROJETS, METTRE IMAGES EN NOIR ET BLANC => COULEUR EN HOVER (grayscall transition)
 
 const projectsData = [
     {

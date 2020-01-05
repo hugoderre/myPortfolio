@@ -8,6 +8,17 @@
     margin-top: 80px;
     width: 80%;
     height: 80%;
-    border:1px solid black;
     background: rgba(0,0,0,0.5);
+    padding:20px; 
+}
+.img-wrapper {
+    height:200px;
+    width: 200px;
+    border-radius:200px;
+    overflow: hidden;
+    
+}
+.img-wrapper > img {
+    height: 200px;
+    margin-left:5px; 
 }
