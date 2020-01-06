@@ -1,24 +1,92 @@
 .profile-main {
-    height: 100vh;
-    width: 100%;
-    border:1px solid black;
-}
+  height: 100vh;
+  width: 100%;
+  border: 1px solid black; }
+
 .profile-box {
-    margin:auto;
-    margin-top: 80px;
-    width: 80%;
-    height: 80%;
-    background: rgba(0,0,0,0.5);
-    padding:20px; 
-}
+  margin: auto;
+  margin-top: 80px;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px; }
+
 .img-wrapper {
-    height:200px;
-    width: 200px;
-    border-radius:200px;
-    overflow: hidden;
-    
-}
-.img-wrapper > img {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  overflow: hidden; }
+  .img-wrapper > img {
     height: 200px;
-    margin-left:5px; 
-}
+    margin-left: 5px; }
+
+.skill-bar-1 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 10%; }
+
+.skill-bar-2 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 20%; }
+
+.skill-bar-3 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 30%; }
+
+.skill-bar-4 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 40%; }
+
+.skill-bar-5 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 50%; }
+
+.skill-bar-6 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 60%; }
+
+.skill-bar-7 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 70%; }
+
+.skill-bar-8 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 80%; }
+
+.skill-bar-9 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 90%; }
+
+.skill-bar-10 {
+  height: 5px;
+  background: black;
+  animation: 3s slidein;
+  width: 100%; }
+
+@keyframes slidein {
+  from {
+    width: 0; } }
+.bar-wrapper {
+  border: 2px solid black; }
+
+.item-bar {
+  display: none; }
+
+/*# sourceMappingURL=profile.css.map */

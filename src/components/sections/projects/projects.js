@@ -69,21 +69,21 @@ const projectsData = [
 function Card(props) {
     return (
         <div className="fadeIn">
-        <div className="card mb-3">
-            <div className="row no-gutters">
-                <div className="col-md-4">
-                    <img src={props.data.srcImg} className="card-img-top" alt=""></img> 
-                </div>
-                <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">{props.data.title}</h5>
-                        <p className="card-text">{props.data.description}</p>
-                        <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}.</span>)}</p>
-                        <a href={props.data.url} className="btn btn-primary btn-card" target="_blank" rel="noopener noreferrer">Voir</a>
+            <div className="card mb-3">
+                <div className="row no-gutters">
+                    <div className="col-md-4">
+                        <img src={props.data.srcImg} className="card-img-top" alt=""></img> 
+                    </div>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{props.data.title}</h5>
+                            <p className="card-text">{props.data.description}</p>
+                            <p>Technologies : {props.data.technology.map((tech,index) => <span key={tech + index}>{tech}.</span>)}</p>
+                            <a href={props.data.url} className="btn btn-primary btn-card" target="_blank" rel="noopener noreferrer">Voir</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     )
 }

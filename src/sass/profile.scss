@@ -1,0 +1,44 @@
+.profile-main {
+    height: 100vh;
+    width: 100%;
+    border:1px solid black;
+}
+.profile-box {
+    margin:auto;
+    margin-top: 80px;
+    width: 80%;
+    height: 80%;
+    background: rgba(0,0,0,0.5);
+    padding:20px; 
+}
+.img-wrapper {
+    height:200px;
+    width: 200px;
+    border-radius:200px;
+    overflow: hidden;
+    & > img {
+        height: 200px;
+        margin-left:5px; 
+    }
+}
+
+@for $i from 1 to 11 {
+    .skill-bar-#{$i} {
+        height:5px;
+        background:black;
+        animation: 3s slidein;
+        width: $i * 10%;
+    }
+}
+@keyframes slidein {
+    from { width: 0; }
+}
+
+.bar-wrapper {
+    border:2px solid black,
+}
+
+.item-bar {
+    display:none;
+}
+
