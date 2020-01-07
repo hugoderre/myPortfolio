@@ -1,13 +1,31 @@
 .presentation {
-    height: 100%; 
-    margin-top : -61px;
-    padding-top: 61px;
+    height:100vh;
+    margin-top:-61px;
 }
 #scene-canvas {
     display: block;
     margin: 20px auto 0;
     position: relative;
 }
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-height: 400px) {
+    #scene-canvas {
+    width:300px;
+    height:300px;
+}
+}
+@media screen and (max-height: 200px) {
+        #scene-canvas {
+        width:200px;
+        height:200px;
+    }
+}
+
 .presentation .container {
     max-width: 680px!important;
     margin-top:20px;

@@ -1,13 +1,11 @@
 .profile-main {
   height: 100%;
-  min-height: 700px;
-  width: 100%;
-  margin-top: 200px; }
+  width: 100%; }
 
 .profile-box {
   margin: auto;
   margin-top: 80px;
-  width: 80%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px; }
@@ -23,70 +21,70 @@
 
 .level-bar-1 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 10%;
   display: none; }
 
 .level-bar-2 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 20%;
   display: none; }
 
 .level-bar-3 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 30%;
   display: none; }
 
 .level-bar-4 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 40%;
   display: none; }
 
 .level-bar-5 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 50%;
   display: none; }
 
 .level-bar-6 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 60%;
   display: none; }
 
 .level-bar-7 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 70%;
   display: none; }
 
 .level-bar-8 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 80%;
   display: none; }
 
 .level-bar-9 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 90%;
   display: none; }
 
 .level-bar-10 {
   height: 5px;
-  background: black;
+  background: #dee2e6;
   animation: 3s slidein;
   width: 100%;
   display: none; }
@@ -95,13 +93,36 @@
   from {
     width: 0; } }
 .bar-wrapper {
-  border: 2px solid black; }
+  border: 2px solid #000;
+  background: #212529; }
 
 .aos-animate .level-bar {
   display: block; }
 
+.container-skill-bar {
+  margin-top: 50px; }
+
 .item-bar {
   font-size: 20px;
   margin-bottom: 10px; }
+
+.text-about-me {
+  font-family: B612, sans-serif;
+  font-size: 18px; }
+
+.level-bar {
+  position: relative; }
+  .level-bar > span {
+    position: absolute;
+    right: 0px;
+    animation: 3s fadeindelay; }
+
+@keyframes fadeindelay {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=profile.css.map */

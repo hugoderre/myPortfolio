@@ -4,24 +4,25 @@ import './presentation.css'
 import './canvas/main'
 import './border-animation.css'
 
+function Button(props) {
+    return(
+    <div className="col-sm-6 col-6 text-center title-item">
+        <a href="#" className="border-animation">
+            <div className="border-animation__inner">{props.name}</div>
+        </a>
+    </div>
+    )
+}
 
-export default function Presentation() {
+export default function Presentation () {
     return (
-            <div className="container-fluid presentation">
+            <div className="presentation flex">
                 <div className="fadeIn">
                     <canvas id="scene-canvas" height="400" width="400" tabIndex="1"></canvas>
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-6 col-12 text-center title-item">
-                                <a href="#" className="border-animation">
-                                    <div className="border-animation__inner">My Profile</div>
-                                </a>
-                            </div>
-                            <div className="col-sm-6 col-12 text-center title-item">
-                            <a href="#" className="border-animation">
-                                    <div className="border-animation__inner">My Projects</div>
-                                </a>
-                            </div>
+                            <Button name="My profile" />
+                            <Button name="My projects" />
                         </div>
                     </div>
                 </div>

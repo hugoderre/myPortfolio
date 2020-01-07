@@ -1,15 +1,15 @@
+@import '_variables.scss';
+
 .profile-main {
     height: 100%;
-    min-height: 700px;
+    
     width: 100%;
-    margin-top:200px;
-
 }
 
 .profile-box {
     margin:auto;
     margin-top: 80px;
-    width: 80%;
+    width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
     padding:20px; 
@@ -28,7 +28,7 @@
 @for $i from 1 to 11 {
     .level-bar-#{$i} {
         height:5px;
-        background:black;
+        background:$gray-300;
         animation: 3s slidein;
         width: $i * 10%;
         display:none;
@@ -39,13 +39,38 @@
 }
 
 .bar-wrapper {
-    border:2px solid black,
+    border:2px solid $black;
+    background:$gray-900;
+
 }
 
 .aos-animate .level-bar {
     display:block;
 }
+.container-skill-bar {
+    margin-top:50px;
+}
 .item-bar {
     font-size:20px;
     margin-bottom: 10px;
+}
+.text-about-me {
+    font-family: B612, sans-serif;
+    font-size:18px;
+}
+.level-bar {
+    position: relative;
+    & > span {
+        
+        position: absolute;
+        right: 0px;
+        animation: 3s fadeindelay;
+        
+    }
+}
+@keyframes fadeindelay {
+    
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% { opacity: 1;}
 }
