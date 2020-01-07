@@ -3,6 +3,7 @@ import './profile.css'
 import MyFace from '../../img/photocv.png'
 
 
+
 const skillTab = [
     {name: 'HTML', level: '8'},
     {name: 'CSS | SASS', level: '7'},
@@ -17,14 +18,20 @@ const skillTab = [
 export default class Profile extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { isHide: true };
     }
 
-    state = { isHide: false };
+    
 
     hideBar = () => {
        const { isHide } = this.state
-
-       window.scrollY < 300 ? !isHide && this.setState({ isHide: true }) : isHide && this.setState({ isHide: false }) 
+        console.log(window.scrollY)
+    //    window.scrollY < 300 ? !isHide && this.setState({ isHide: true }) : isHide && this.setState({ isHide: false }) 
+       if(window.scrollY > 200) {
+            if(isHide) {
+                this.setState({isHide:false})
+            }
+       }
 
        this.prev = window.scrollY;
        
@@ -64,31 +71,6 @@ export default class Profile extends React.Component {
 }
 
 class Skill extends Profile {
-    // constructor(props) {
-    //     super(props);
-    // }
-
-    // state = { isHide: false };
-
-    // hideBar = () => {
-    //    const { isHide } = this.state
-
-    //    window.scrollY < 300 ?
-    //    !isHide && this.setState({ isHide: true })
-    //    :
-    //    isHide && this.setState({ isHide: false });
-
-    //    this.prev = window.scrollY;
-    //    console.log(this.prev)
-    // }
-
-    // componentDidMount(){
-    //     window.addEventListener('scroll', this.hideBar);
-    // }
-
-    // componentWillUnmount(){
-    //      window.removeEventListener('scroll', this.hideBar);
-    // }
 
     render() {
         const classHide = this.state.isHide ? 'hide' : '';
