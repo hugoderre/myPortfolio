@@ -21,70 +21,87 @@
     height: 200px;
     margin-left: 5px; }
 
-.skill-bar-1 {
+.level-bar-1 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 10%; }
+  width: 10%;
+  display: none; }
 
-.skill-bar-2 {
+.level-bar-2 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 20%; }
+  width: 20%;
+  display: none; }
 
-.skill-bar-3 {
+.level-bar-3 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 30%; }
+  width: 30%;
+  display: none; }
 
-.skill-bar-4 {
+.level-bar-4 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 40%; }
+  width: 40%;
+  display: none; }
 
-.skill-bar-5 {
+.level-bar-5 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 50%; }
+  width: 50%;
+  display: none; }
 
-.skill-bar-6 {
+.level-bar-6 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 60%; }
+  width: 60%;
+  display: none; }
 
-.skill-bar-7 {
+.level-bar-7 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 70%; }
+  width: 70%;
+  display: none; }
 
-.skill-bar-8 {
+.level-bar-8 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 80%; }
+  width: 80%;
+  display: none; }
 
-.skill-bar-9 {
+.level-bar-9 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 90%; }
+  width: 90%;
+  display: none; }
 
-.skill-bar-10 {
+.level-bar-10 {
   height: 5px;
   background: black;
   animation: 3s slidein;
-  width: 100%; }
+  width: 100%;
+  display: none; }
 
 @keyframes slidein {
   from {
     width: 0; } }
 .bar-wrapper {
   border: 2px solid black; }
+
+.aos-animate .level-bar {
+  display: block; }
+
+.item-bar {
+  font-size: 20px;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=profile.css.map */

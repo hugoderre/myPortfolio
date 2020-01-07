@@ -26,11 +26,12 @@
 }
 
 @for $i from 1 to 11 {
-    .skill-bar-#{$i} {
+    .level-bar-#{$i} {
         height:5px;
         background:black;
         animation: 3s slidein;
         width: $i * 10%;
+        display:none;
     }
 }
 @keyframes slidein {
@@ -41,4 +42,10 @@
     border:2px solid black,
 }
 
-
+.aos-animate .level-bar {
+    display:block;
+}
+.item-bar {
+    font-size:20px;
+    margin-bottom: 10px;
+}

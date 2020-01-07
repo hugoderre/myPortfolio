@@ -14,12 +14,12 @@ export default function Presentation() {
                         <div className="row">
                             <div className="col-sm-6 col-12 text-center title-item">
                                 <a href="#" className="border-animation">
-                                    <div className="border-animation__inner">Mon profil</div>
+                                    <div className="border-animation__inner">My Profile</div>
                                 </a>
                             </div>
                             <div className="col-sm-6 col-12 text-center title-item">
                             <a href="#" className="border-animation">
-                                    <div className="border-animation__inner">Mes projets</div>
+                                    <div className="border-animation__inner">My Projects</div>
                                 </a>
                             </div>
                         </div>

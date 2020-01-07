@@ -19,39 +19,30 @@ const skillTab = [
 export default class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {isHide : true}
     }
 
-    hideBar = () => {
-        const { isHide } = this.state
-         
-        if(window.scrollY > 200) {
-             if(isHide) {
-                 this.setState({isHide:false})
-             }
-        }
-        this.prev = window.scrollY;
-    }
     componentDidMount(){
-        window.addEventListener('scroll', this.hideBar);
         AOS.init({
             duration : 2000
         })
     }
 
-    componentWillUnmount(){
-        window.removeEventListener('scroll', this.hideBar);
-    }
+    
 
     render () {
         return (
             <div data-aos="fade-up" data-aos-once="true"  id="profile-main-id" className="container-fluid profile-main">
-                <div className="item-bar profile-box">
+                <div className="item-bar profile-box Regular shadow">
                     <div className="row">
                         <div className="col-12 col-sm-6">
-                            <div className="img-wrapper">
-                                {/* <img src={MyFace} alt="Ma tête sur mon CV"/> */}
+                            <div className="img-wrapper mx-auto mb-3">
+                                <img src={MyFace} alt="Ma tête sur mon CV"/>
                             </div>
+                            <div className="container text-center text-white">Who's this little man ?<br/> 
+Hi, I'm Hugo Derré, a Front-End Developper. I spend my time to animate and script things with passion !
+Recently, I discovered React, and i love this ! This portfolio is an exercise for practice it !
+Also, I maked applications that you can see below. Enjoy it ! </div>
+                            
                         </div>
                         <div className="col-12 col-sm-6">  
                             <ul>
@@ -70,12 +61,11 @@ export default class Profile extends React.Component {
 class Skill extends Profile {
 
     render() {
-        const classHide = this.state.isHide ? 'hide' : '';
         return (
-            <li className="item-bar">
+            <li className="item-bar text-white">
                 {this.props.data.name}<br/>
                 <div className="bar-wrapper">
-                  <div className={classHide + "skill-bar-" + this.props.data.level}></div>
+                  <div className={"level-bar level-bar-" + this.props.data.level}></div>
                 </div>
             </li>
         )
