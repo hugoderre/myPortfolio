@@ -27,5 +27,4 @@ export default function Presentation() {
                 </div>
             </div>
     )
-    
 }

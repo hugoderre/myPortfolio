@@ -1,7 +1,8 @@
 import React from 'react'
 import './profile.css'
 import MyFace from '../../img/photocv.png'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const skillTab = [
@@ -18,27 +19,24 @@ const skillTab = [
 export default class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isHide: true };
+        this.state = {isHide : true}
     }
-
-    
 
     hideBar = () => {
-       const { isHide } = this.state
-        console.log(window.scrollY)
-    //    window.scrollY < 300 ? !isHide && this.setState({ isHide: true }) : isHide && this.setState({ isHide: false }) 
-       if(window.scrollY > 200) {
-            if(isHide) {
-                this.setState({isHide:false})
-            }
-       }
-
-       this.prev = window.scrollY;
-       
+        const { isHide } = this.state
+         
+        if(window.scrollY > 200) {
+             if(isHide) {
+                 this.setState({isHide:false})
+             }
+        }
+        this.prev = window.scrollY;
     }
-
     componentDidMount(){
         window.addEventListener('scroll', this.hideBar);
+        AOS.init({
+            duration : 2000
+        })
     }
 
     componentWillUnmount(){
@@ -46,14 +44,13 @@ export default class Profile extends React.Component {
     }
 
     render () {
-        const classHide = this.state.isHide ? 'hide' : '';
         return (
-            <div className="container-fluid profile-main">
-                <div className={classHide + "fadeIn item-bar profile-box"}>
+            <div data-aos="fade-up" data-aos-once="true"  id="profile-main-id" className="container-fluid profile-main">
+                <div className="item-bar profile-box">
                     <div className="row">
                         <div className="col-12 col-sm-6">
                             <div className="img-wrapper">
-                                <img src={MyFace} alt="Ma tête sur mon CV"/>
+                                {/* <img src={MyFace} alt="Ma tête sur mon CV"/> */}
                             </div>
                         </div>
                         <div className="col-12 col-sm-6">  
@@ -75,13 +72,12 @@ class Skill extends Profile {
     render() {
         const classHide = this.state.isHide ? 'hide' : '';
         return (
-            <li className={classHide + "fadeIn item-bar"}>
+            <li className="item-bar">
                 {this.props.data.name}<br/>
                 <div className="bar-wrapper">
-                    <div className={classHide + "skill-bar-" + this.props.data.level}></div>
+                  <div className={classHide + "skill-bar-" + this.props.data.level}></div>
                 </div>
             </li>
         )
-    }
-    
+    }   
 }
