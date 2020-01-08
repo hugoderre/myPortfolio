@@ -3,7 +3,7 @@ import './profile.css'
 import MyFace from '../../img/photocv.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import './hexagon.css'
 
 const skillTab = [
     {name: 'HTML', level: '8'},
@@ -31,12 +31,13 @@ export default class Profile extends React.Component {
 
     render () {
         return (
-            <div data-aos="fade-up" data-aos-once="true" data-aos-anchor-placement="middle-bottom" id="profile-main-id" className="container-fluid profile-main">
+            <div data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" id="profile-main-id" className="container-fluid profile-main">
                 <div className="item-bar profile-box shadow-lg">
+                    <h2 data-aos="fade-right" data-aos-once="true" className="text-center text-white sections-title">Profile</h2><hr></hr>
                     <div className="row">
                         <div className="col-12 col-sm-6">
-                            <div className="img-wrapper mx-auto">
-                                <img src={MyFace} alt="Ma tête sur mon CV"/>
+                            <div className="hexagone mb-4 mx-auto">
+                                <div className="hexagonemain"></div>
                             </div>
                             <div className="container text-center text-white text-about-me">
                                 <h3>Who's this little man ?</h3><hr></hr> 
