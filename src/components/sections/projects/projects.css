@@ -4,5 +4,12 @@
 }
 .projects-container {
     margin-top:200px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
+}
+.tech-item {
+    padding: 0 .75rem 0 .75rem !important;
+    font-size:0.7rem !important;
+    color:white !important;
+    background-color: rgb(246, 185, 72) !important;
+    border-color: rgb(246, 185, 72) !important;
 }

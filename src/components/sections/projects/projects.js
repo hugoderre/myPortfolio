@@ -60,30 +60,32 @@ const projectsData = [
 
 function Card(props) {
     return (
+        
         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <div className="hovereffect">
                 <img  src={props.data.srcImg} width="100%" alt="" />
-                    <div className="overlay">
-                        <h2>{props.data.title}</h2>
-                        <div>{props.data.technology.map((tech,index) => <span key={tech + index}>{tech} </span>)}</div>
-                        <p>
-                            <a href={props.data.url} target="_blank" rel="noopener noreferrer">Voir</a>
-                        </p>
-                    </div>
+                <div className="overlay">
+                    <h2>{props.data.title}</h2>
+                    <div>{props.data.technology.map((tech,index) => <span className="tech-item btn" key={tech + index}>{tech} </span>)}</div>
+                    <p>
+                        <a href={props.data.url} target="_blank" rel="noopener noreferrer">Voir</a>
+                    </p>
+                </div>
             </div>
         </div>
+        
         )
 }
 
 export default function Projects() {
     return (
-        <div data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container">
+        <section data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
             <h2 data-aos="fade-right" data-aos-once="true" className="text-center text-white sections-title">Projects</h2><hr></hr>
             <div className="row project-container">
                 {projectsData.map((project, index) =>
                     <Card key={project.title + '-' + index} data={projectsData[index]}/>
                 )}
             </div>
-        </div>
+        </section>
     )
 }

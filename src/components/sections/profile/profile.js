@@ -1,9 +1,10 @@
 import React from 'react'
 import './profile.css'
-import MyFace from '../../img/photocv.png'
+// import MyFace from '../../img/photocv.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './hexagon.css'
+
 
 const skillTab = [
     {name: 'HTML', level: '8'},
@@ -17,21 +18,16 @@ const skillTab = [
 
 
 export default class Profile extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     componentDidMount(){
         AOS.init({
             duration : 2000
         })
     }
 
-    
-
     render () {
         return (
-            <div data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" id="profile-main-id" className="container-fluid profile-main">
+            <section data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" id="profile-main-id" className="container-fluid profile-main" name="profile">
                 <div className="item-bar profile-box shadow-lg">
                     <h2 data-aos="fade-right" data-aos-once="true" className="text-center text-white sections-title">Profile</h2><hr></hr>
                     <div className="row">
@@ -58,7 +54,7 @@ export default class Profile extends React.Component {
                         </div>
                     </div>      
                 </div>
-            </div>
+            </section>
         )
     }    
 }

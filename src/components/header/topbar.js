@@ -18,6 +18,10 @@ const socialItems = [
     {
         link : "https://www.instagram.com/gohuuuu/",
         icon : "btn-sm fab fa-instagram"
+    },
+    {
+        link : "mailto:hugo.d83@outlook.fr",
+        icon : "btn-sm 	fas fa-envelope"
     }
 ]
 export default function TopBar() {

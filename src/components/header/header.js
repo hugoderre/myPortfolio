@@ -4,9 +4,9 @@ import Presentation from './presentation'
 
 export default function Header() {
     return (
-        <div className="header">
+        <header>
             <TopBar />
             <Presentation />
-        </div>
+        </header>
     )
 }
