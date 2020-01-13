@@ -63,7 +63,7 @@ class Skill extends Profile {
 
     render() {
         return (
-            <li className="item-bar text-white">
+            <li data-aos="fade-right" data-aos-once="true" className="item-bar text-white">
                 {this.props.data.name}<br/>
                 <div className="bar-wrapper">
                   <div className={"level-bar level-bar-" + this.props.data.level}>

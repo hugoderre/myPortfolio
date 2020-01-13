@@ -1,0 +1,12 @@
+footer {
+    padding: .5rem 2rem;
+}
+.contact-container {
+    width: 50%;
+    margin: auto;
+}
+@media screen and (max-width: 640px) {
+    .contact-container {
+        width: 100%;
+    }
+  }

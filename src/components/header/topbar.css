@@ -1,6 +1,10 @@
 .navbar {
   display: block !important; 
 }
+.s-m {
+  margin-right: 6px;
+}
+
 
 .s-m a {
   display: inline-flex;
@@ -13,10 +17,9 @@
   align-items: center;
   transition: 0.4s;
   text-decoration: none !important;
-  font-size: 24px; }
+  font-size: 24px; 
+}
 
-.s-m a:hover {
-  background: #e67e22; }
 
 .s-m a i {
   transition: 0.4s all; }

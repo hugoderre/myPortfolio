@@ -95,7 +95,7 @@
   border: 2px solid #000;
   background: #212529; }
 
-.aos-animate .level-bar {
+.aos-animate > .bar-wrapper > .level-bar {
   display: block; }
 
 .container-skill-bar {
