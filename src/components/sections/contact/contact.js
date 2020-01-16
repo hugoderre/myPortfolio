@@ -41,7 +41,7 @@ export default class Contact extends Component {
     }
     render() {
         return (
-            <div className="card">
+            <div className="card contact-container">
                 <div className="card-body">
 
                     <form onSubmit={this.handleSubmit.bind(this)}>

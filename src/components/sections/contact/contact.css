@@ -1,6 +1,16 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
 
+.contact-container {
+    width: 50%;
+    margin: auto;
+}
+@media screen and (max-width: 640px) {
+    .contact-container {
+        width: 100%;
+    }
+}
+
 .hm-gradient {
     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
@@ -74,3 +84,9 @@
     background-color: #6c757d!important;
     border:1px solid #6c757d!important;
 }
+.btn-secondary {
+    background-color: #6c757d!important;
+    border-color: #6c757d!important;
+}
+
+

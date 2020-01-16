@@ -4,11 +4,10 @@ import Sections from './sections/sections'
 import Footer from './footer/footer'
 
 
-class App extends Component {
+class Home extends Component {
     render() {
         return (
-            <div className="container-fluid">
-                <Header />
+            <div>
                 <Sections />
                 <Footer />
             </div>
@@ -16,4 +15,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default Home
