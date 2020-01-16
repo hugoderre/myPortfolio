@@ -1,4 +1,3 @@
-
 /**
  *
  * Triangle mesh for 3D objects in HTML5
@@ -60,28 +59,28 @@ function prepareObject(o) {
 function triangle() {
 
     // prepare points and faces for triangle
-    this.points = [
-        [0, 0, 0],
-        [100, 0, 0],
-        [100, 100, 0],
-        [0, 100, 0],
-        [0, 0, 100],
-        [100, 0, 100],
-        [100, 100, 100],
-        [0, 100, 100],
-        [50, 50, 100],
-        [50, 50, 0],
+    this.points=[
+        [0,0,0],
+        [100,0,0],
+        [100,100,0],
+        [0,100,0],
+        [0,0,100],
+        [100,0,100],
+        [100,100,100],
+        [0,100,100],
+        [50,50,100],
+        [50,50,0],
     ];
 
-    this.faces = [
-        [8, 5, 4],
-        [8, 6, 5],
-        [8, 7, 6],
-        [8, 4, 7],
-        [9, 5, 4],
-        [9, 6, 5],
-        [9, 7, 6],
-        [9, 4, 7],
+    this.faces=[
+        [8,5,4],
+        [8,6,5],
+        [8,7,6],
+        [8,4,7],
+        [9,5,4],
+        [9,6,5],
+        [9,7,6],
+        [9,4,7],
     ];
 
     prepareObject(this);
@@ -93,7 +92,7 @@ function getRotationPar(center, vector, t) {
 
     var u_u = vector[0] * vector[0];
     var v_v = vector[1] * vector[1];
-    var w_w = vector[2] * vector[2];
+    var w_w = vector[2] * vector[2]; 
 
     var v_v_p_w_w = (v_v + w_w);
     var u_u_p_w_w = (u_u + w_w);
@@ -106,7 +105,7 @@ function getRotationPar(center, vector, t) {
     var c_u_m_a_w = center[2] * vector[0] - center[0] * vector[2];
     var a_v_m_b_u = center[0] * vector[1] - center[1] * vector[0];
 
-    var den = v_v + u_u + w_w;
+    var den = v_v+u_u+w_w;
 
     result[0] = den;
 
@@ -145,13 +144,13 @@ function rotate(p, point) {
     var p_19_p_1 = p[19] * point[1];
     var p_18_p_0 = p[18] * point[0];
     var u_x_p_v_y_p_w_z = p_18_p_0 + p_19_p_1 + p_20_p_2;
-
+    
     var temp0 = point[0];
     var temp1 = point[1];
 
-    point[0] = (p[4] + p[18] * (-p[7] + u_x_p_v_y_p_w_z) + ((temp0 - p[15]) * p[1] + p[18] * (p[7] - p_19_p_1 - p_20_p_2)) * p[10] + p[11] * (p[12] - p[20] * temp1 + p[19] * point[2])) / p[0];
-    point[1] = (p[5] + p[19] * (-p[8] + u_x_p_v_y_p_w_z) + ((temp1 - p[16]) * p[2] + p[19] * (p[8] - p_18_p_0 - p_20_p_2)) * p[10] + p[11] * (p[13] + p[20] * temp0 - p[18] * point[2])) / p[0];
-    point[2] = (p[6] + p[20] * (-p[9] + u_x_p_v_y_p_w_z) + ((point[2] - p[17]) * p[3] + p[20] * (p[9] - p_18_p_0 - p_19_p_1)) * p[10] + p[11] * (p[14] - p[19] * temp0 + p[18] * temp1)) / p[0];
+    point[0] = (p[4]+p[18]*(-p[7]+u_x_p_v_y_p_w_z)+((temp0-p[15])*p[1]+p[18]*(p[7]-p_19_p_1-p_20_p_2))*p[10]+p[11]*(p[12]-p[20]*temp1+p[19]*point[2]))/p[0];
+    point[1] = (p[5]+p[19]*(-p[8]+u_x_p_v_y_p_w_z)+((temp1-p[16])*p[2]+p[19]*(p[8]-p_18_p_0-p_20_p_2))*p[10]+p[11]*(p[13]+p[20]*temp0-p[18]*point[2]))/p[0];
+    point[2] = (p[6]+p[20]*(-p[9]+u_x_p_v_y_p_w_z)+((point[2]-p[17])*p[3]+p[20]*(p[9]-p_18_p_0-p_19_p_1))*p[10]+p[11]*(p[14]-p[19]*temp0+p[18]*temp1))/p[0];
 }
 
 function translate(vector, point) {
@@ -220,28 +219,23 @@ var iHalfX, iHalfY;
 // initialization
 function sceneInit() {
     // prepare canvas and context objects
+    canvas = document.getElementById('scene-canvas');
+    ctx = canvas.getContext('2d');
+    iHalfX = canvas.width / 2;
+    iHalfY = canvas.height / 2;
 
-    canvas = document.getElementById('scene-canvas') || null;
-    if (canvas === null) {
-        console.log('null')
-    } else {
-        ctx = canvas.getContext('2d');
-        iHalfX = canvas.width / 2;
-        iHalfY = canvas.height / 2;
+    // initial scale and translate
+    scaleObj([3, 3, 3], obj);
+    translateObj([-obj.center[0], -obj.center[1], -obj.center[2]],obj);
+    translateObj([0, 0, -1000], obj);
+    // attach event handler
+    
+    vShiftX = 0.008;
+    vShiftY = 0.003;
+    // canvas.addEventListener("mousemove", handleMousemove, false);
 
-        // initial scale and translate
-        scaleObj([3, 3, 3], obj);
-        translateObj([-obj.center[0], -obj.center[1], -obj.center[2]], obj);
-        translateObj([0, 0, -1000], obj);
-        // attach event handler
-
-        vShiftX = 0.008;
-        vShiftY = 0.003;
-        // canvas.addEventListener("mousemove", handleMousemove, false);
-
-        // main scene loop
-        setInterval(drawScene, 25);
-    }
+    // main scene loop
+    setInterval(drawScene, 25);
 }
 
 
@@ -249,7 +243,7 @@ function sceneInit() {
 // function handleMousemove(e) {
 //     var x = e.pageX - canvas.offsetLeft;
 //     var y = e.pageY - canvas.offsetTop;
-
+    
 //     if ((x > 0) && (x < canvas.width) && (y > 0) && (y < canvas.height)) {
 //         vShiftY = vMouseSens * (x - iHalfX) / iHalfX;
 //         vShiftX = vMouseSens * (y - iHalfY) / iHalfY;
@@ -260,12 +254,12 @@ function sceneInit() {
 function drawScene() {
     // clear canvas
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
+    
     // set fill color, stroke color, line width and global alpha
     ctx.strokeStyle = 'rgb(0,0,0)';
     ctx.lineWidth = 0.5;
-    ctx.globalAlpha = vAlpha;
-
+    ctx.globalAlpha= vAlpha;
+    
     // vertical and horizontal rotate
     var vP1x = getRotationPar([0, 0, -1000], [1, 0, 0], vShiftX);
     var vP2x = getRotationPar([0, 0, 0], [1, 0, 0], vShiftX);
@@ -276,7 +270,7 @@ function drawScene() {
 
     // recalculate distances
     for (var i = 0; i < obj.points_number; i++) {
-        obj.distances[i] = Math.pow(obj.points[i][0], 2) + Math.pow(obj.points[i][1], 2) + Math.pow(obj.points[i][2], 2);
+        obj.distances[i] = Math.pow(obj.points[i][0],2) + Math.pow(obj.points[i][1],2) + Math.pow(obj.points[i][2], 2);
     }
 
     // prepare array with face triangles (with calculation of max distance for every face)
@@ -286,9 +280,9 @@ function drawScene() {
         var max = obj.distances[obj.faces[i][0]];
         for (var f = 1; f < obj.faces[i].length; f++) {
             if (obj.distances[obj.faces[i][f]] > max)
-                max = obj.distances[obj.faces[i][f]];
+                max = obj.distances[obj.faces[i][f]]; 
         }
-        aFaceTriangles[iCnt++] = { faceVertex: obj.faces[i], faceColor: obj.colors[i], distance: max };
+        aFaceTriangles[iCnt++] = {faceVertex:obj.faces[i], faceColor:obj.colors[i], distance:max};
     }
     aFaceTriangles.sort(sortByDistance);
 
@@ -335,7 +329,7 @@ if (window.attachEvent) {
 } else {
     if (window.onload) {
         var curronload = window.onload;
-        var newonload = function () {
+        var newonload = function() {
             curronload();
             sceneInit();
         };
