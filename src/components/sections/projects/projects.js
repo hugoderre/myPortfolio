@@ -62,8 +62,8 @@ function Card(props) {
     return (
         
         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div className="hovereffect">
-                <img  src={props.data.srcImg} width="100%" alt="" />
+            <div className="hovereffect img-projects-wrapper" data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center">
+                <img src={props.data.srcImg} alt="" />
                 <div className="overlay">
                     <h2>{props.data.title}</h2>
                     <div>{props.data.technology.map((tech,index) => <span className="tech-item btn" key={tech + index}>{tech} </span>)}</div>

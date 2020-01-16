@@ -8,8 +8,15 @@
 }
 .tech-item {
     padding: 0 .75rem 0 .75rem !important;
-    font-size:0.7rem !important;
+    font-size: 0.7rem !important;
     color:white !important;
     background-color: rgb(246, 185, 72) !important;
     border-color: rgb(246, 185, 72) !important;
+}
+.img-projects-wrapper > img {
+    width: 100%;
+    display:none;
+}
+.img-projects-wrapper.aos-animate > img {
+    display:block;
 }

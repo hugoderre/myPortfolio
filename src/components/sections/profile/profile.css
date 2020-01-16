@@ -105,7 +105,9 @@
   font-size: 20px;
   margin-bottom: 10px; }
 
-
+.profile-title {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 100px; }
 
 .text-about-me {
   font-family: B612, sans-serif;
