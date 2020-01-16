@@ -1,6 +1,5 @@
 import React from 'react'
 import './profile.css'
-// import MyFace from '../../img/photocv.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './hexagon.css'
