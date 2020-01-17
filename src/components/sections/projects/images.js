@@ -5,6 +5,7 @@ import quotor from '../../../img/quotor.png'
 import cs2d from '../../../img/cs2d.png'
 import resto from '../../../img/resto.png'
 import todo from '../../../img/todo.png'
+import frames from '../../../img/frames.jpg'
 
 export default {
     chalets,
@@ -13,5 +14,6 @@ export default {
     quotor,
     cs2d,
     resto,
-    todo
+    todo,
+    frames
 }

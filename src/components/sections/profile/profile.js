@@ -6,13 +6,15 @@ import './hexagon.css'
 
 
 const skillTab = [
-    {name: 'HTML', level: '8'},
-    {name: 'CSS | SASS', level: '7'},
-    {name: 'Javascript | jQuery', level: '7'},
+    {name: 'HTML', level: '9'},
+    {name: 'CSS | SASS', level: '8'},
+    {name: 'Javascript | jQuery', level: '8'},
     {name: 'React', level: '7'},
-    {name: 'PHP', level: '6'},
+    {name: 'Wordpress', level: '8'},
+    {name: 'Git', level: '7'},
     {name: 'SQL', level: '6'},
-    {name: 'Git', level: '6'}
+    {name: 'PHP', level: '6'}
+    
 ]
 
 

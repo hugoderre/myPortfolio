@@ -7,6 +7,13 @@ import './projects.css'
 
 const projectsData = [
     {
+        title: "Création d'un site web pour une entreprise d'audio-visuel",
+        description: "",
+        technology: ["Wordpress","Javascript"],
+        url: "http://frames-prod.com/",
+        srcImg: images.frames
+    },
+    {
         title: "Intégrer un thème Wordpress pour un client",
         description: "Création d'un site web une agence de chalets de luxe.",
         technology: ["Wordpress"],

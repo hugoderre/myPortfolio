@@ -92,6 +92,4 @@
 .form-control::placeholder , .md-textarea::placeholder {
     color:white!important;
 }
-.md-textarea::placeholder {
-    padding-left: 12px;
-}
+
