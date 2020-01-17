@@ -16,14 +16,14 @@ const projectsData = [
     {
         title: "Analyser les besoins d'un client pour son Festival de films",
         description: "Création d'un site web un festival de cinéma à Paris.",
-        technology: ["HTML5", "CSS3", "Bootstrap"],
+        technology: ["Bootstrap"],
         url: "http://hugoderre.fr/films_plein_air/",
         srcImg: images.festival
     },
     {
-        title: "Concevoir la solution technique d'une application de restauration en ligne, Express Food",
+        title: "Concevoir la solution technique d'une application de restauration en ligne.",
         description: "Réaliser des schéma UML (classes, séquences, cas d'utilisation...), concevoir une base de données (MPD,Power Architect) et l'intégrer avec un SGBD",
-        technology: ["UML", "MySQL", "phpMyAdmin"],
+        technology: ["UML", "MySQL"],
         url: "http://hugoderre.fr/expressfood/",
         srcImg: images.uml
     },
@@ -44,7 +44,7 @@ const projectsData = [
     {
         title: "Lancer site d'avis/listing de restaurants",
         description: "Première utilisation d'AJAX. Création d'une application de listing de restaurant avec l'API Google Maps (map, geolocation, markers, ratings, comments). Mon serveur n'ayant pas encore de certificat SSL, certaines features (comme la géolocalisation) ne sont pas dispnible",
-        technology: ["Javascript", "jQuery", "API REST"],
+        technology: ["Javascript", "API REST"],
         url: "http://hugoderre.fr/resto_ateco/",
         srcImg: images.resto
     },
@@ -61,8 +61,8 @@ const projectsData = [
 function Card(props) {
     return (
         
-        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <div className="hovereffect img-projects-wrapper" data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-6">
+            <div className="hovereffect img-projects-wrapper" data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="center">
                 <img src={props.data.srcImg} alt="" />
                 <div className="overlay">
                     <h2>{props.data.title}</h2>
@@ -79,8 +79,8 @@ function Card(props) {
 
 export default function Projects() {
     return (
-        <section data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
-            <h2 data-aos="fade-right" data-aos-once="true" className="text-center text-white sections-title">Projects</h2><hr></hr>
+        <section data-aos="fade-left" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
+            <h2 className="text-center text-white sections-title">Projects</h2><hr></hr>
             <div className="row project-container">
                 {projectsData.map((project, index) =>
                     <Card key={project.title + '-' + index} data={projectsData[index]}/>

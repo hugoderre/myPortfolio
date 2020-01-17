@@ -9,9 +9,10 @@ const skillTab = [
     {name: 'HTML', level: '8'},
     {name: 'CSS | SASS', level: '7'},
     {name: 'Javascript | jQuery', level: '7'},
-    {name: 'React', level: '6'},
+    {name: 'React', level: '7'},
     {name: 'PHP', level: '6'},
-    {name: 'SQL', level: '6'}
+    {name: 'SQL', level: '6'},
+    {name: 'Git', level: '6'}
 ]
 
 
@@ -62,7 +63,7 @@ class Skill extends Profile {
 
     render() {
         return (
-            <li data-aos="fade-right" data-aos-once="true" className="item-bar text-white">
+            <li data-aos="fade-right" data-aos-once="true" className="item-bar text-white mb-3">
                 {this.props.data.name}<br/>
                 <div className="bar-wrapper">
                   <div className={"level-bar level-bar-" + this.props.data.level}>

@@ -41,11 +41,10 @@ export default class Contact extends Component {
     }
     render() {
         return (
-            <div className="card contact-container">
+            <div data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" className="contact-container">
                 <div className="card-body">
-
                     <form onSubmit={this.handleSubmit.bind(this)}>
-                        <h2 className="text-center py-4 font-bold font-up danger-text contact-title">Contact me</h2>
+                        <h2 className="text-center py-4 text-white font-bold font-up danger-text contact-title">Contact me</h2>
                         <div className="md-form">
                             <i className="fa fa-user prefix grey-text"></i>
                             <input
@@ -86,7 +85,7 @@ export default class Contact extends Component {
                             <textarea
                                 type="text"
                                 id="form81"
-                                className="md-textarea"
+                                className="form-control md-textarea"
                                 placeholder="Your message"
                                 onChange={this.handleChange.bind(this, 'message')}
                                 required></textarea>

@@ -1,6 +1,7 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
 
+
 .contact-container {
     width: 50%;
     margin: auto;
@@ -88,5 +89,9 @@
     background-color: #6c757d!important;
     border-color: #6c757d!important;
 }
-
-
+.form-control::placeholder , .md-textarea::placeholder {
+    color:white!important;
+}
+.md-textarea::placeholder {
+    padding-left: 12px;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import { Link } from 'react-scroll'
 
 function TextMentions() {
     return (
@@ -96,22 +97,11 @@ function ModalMentions(props) {
 export default function Footer() {
     return (
         <footer className="bg-dark mt-5">
-            <div className="container">
-                <div className="row">
-                    <div className="col-6 text-white text-left contact-infos">
-                        <div>Feel free to contact me by <strong>email</strong> or <strong>phone</strong> !</div>
-                        <ul>
-                            <li><strong>Email</strong> : hugo.d83@outlook.fr</li>
-                            <li><strong>Phone</strong> : +33 652037783</li>
-                        </ul>
-
-                    </div>
-                    <div className="col-6 text-right pt-3">
-                        
-                            <ModalMentions name="Mentions légales" />
-                            <div className="text-white">© Hugo Derré. Tous droits réservés.</div>
-                        
-                    </div>
+            <div className="container pt-1">
+                <Link to="top-page" spy={true} smooth={true} duration={800}><i className="btn-top-scroll fas fa-angle-double-up"></i></Link>
+                <div className="text-right">
+                    <ModalMentions name="Mentions légales" />
+                    <div className="text-white">© Hugo Derré. Tous droits réservés.</div>
                 </div>
             </div>
         </footer>

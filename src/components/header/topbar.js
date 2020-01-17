@@ -1,11 +1,7 @@
 import React from 'react'
 import './topbar.css'
 
-function SocialMedias(props) {
-    return (
-        <a href={props.link} target="_blank" rel="noopener noreferrer"><i className={props.icon}></i></a>
-    )
-}
+
 const socialItems = [
     {
         link : "https://www.linkedin.com/in/hugo-derr%C3%A9-a3144017b/",
@@ -24,10 +20,17 @@ const socialItems = [
         icon : "btn-sm 	fas fa-envelope"
     }
 ]
+
+function SocialMedias(props) {
+    return (
+        <a href={props.link} target="_blank" rel="noopener noreferrer"><i className={props.icon}></i></a>
+    )
+}
+
 export default function TopBar() {
     return (
         
-        <nav className="navbar navbar-dark bg-dark">
+        <nav name="top-page" className="navbar navbar-dark bg-dark">
             <div className="row test">
                 <div className="col-6">
                     <h1 className="navbar-brand mb-0 ml-5 nav-name">HUGO DERRE</h1>
