@@ -29,7 +29,7 @@ export default class Profile extends React.Component {
             <section data-aos="fade-right" data-aos-once="true" data-aos-anchor-placement="center" id="profile-main-id" className="container-fluid profile-main" name="profile">
                 <div className="item-bar profile-box shadow-lg">
                     <h2 data-aos="fade-right" data-aos-once="true" className="text-center text-white sections-title">Profile</h2><hr></hr>
-                    <div className="row">
+                    <div className="row mt-5">
                         <div className="col-12 col-sm-6">
                             <div className="hexagone mb-4 mx-auto">
                                 <div className="hexagonemain"></div>

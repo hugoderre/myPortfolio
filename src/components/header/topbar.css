@@ -4,12 +4,14 @@
 .s-m {
   margin-right: 6px;
 }
-
+h1 {
+  font-size: 1.6em!important;
+}
 
 .s-m a {
   display: inline-flex;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   background: #2c3e50;
   color: white !important;
   border-radius: 50%;
