@@ -9,6 +9,9 @@
   line-height: 1em;
   transform: scale(1, 0.8);
   border: var(--border-width) solid transparent; }
+  @media screen and (max-width: 400px) {
+    .border-animation {
+      font-size: 2em !important; } }
   .border-animation .border-animation__inner {
     position: relative;
     display: inline-block;

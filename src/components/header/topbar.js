@@ -33,7 +33,7 @@ export default function TopBar() {
         <nav name="top-page" className="navbar navbar-dark bg-dark">
             <div className="row test">
                 <div className="col-6">
-                    <h1 className="navbar-brand mb-0 ml-5 nav-name">HUGO DERRE</h1>
+                    <h1 className="navbar-brand mb-0">HUGO DERRE</h1>
                 </div>
                 <div className="col-6">
                     <div className="mb-0 text-right d-block s-m">

@@ -95,7 +95,7 @@
   border: 2px solid #000;
   background: #212529; }
 
-.aos-animate .level-bar {
+.aos-animate > .bar-wrapper > .level-bar {
   display: block; }
 
 .container-skill-bar {
@@ -103,7 +103,6 @@
 
 .item-bar {
   font-size: 22px;
-  margin-bottom: 10px;
   font-family: 'Fira Sans', sans-serif; }
 
 .text-about-me {
@@ -112,6 +111,19 @@
   .text-about-me > h3 {
     font-size: 2rem; }
 
+@media screen and (max-width: 1436px) {
+  .text-about-me {
+    font-size: 17px; }
+    .text-about-me > h3 {
+      font-size: 1.9rem; } }
+@media screen and (max-width: 800px) {
+  .text-about-me {
+    font-size: 15px; }
+    .text-about-me > h3 {
+      font-size: 1.7rem; }
+
+  .item-bar {
+    font-size: 18px; } }
 .level-bar {
   position: relative; }
   .level-bar > span {

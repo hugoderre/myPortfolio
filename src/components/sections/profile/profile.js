@@ -40,9 +40,9 @@ export default class Profile extends React.Component {
                             <div className="container text-center text-white text-about-me">
                                 <h3>Who's this little man ?</h3><hr></hr> 
                                 <p>
-                                    Hi, I'm Hugo Derré, a Front-End Developper. <br/>I spend my time to animate and script things with passion !<br/>
-                                    Recently, I discovered React, and i love this ! This portfolio is an exercise for practice it !
-                                    Also, I maked applications that you can see below. Enjoy it ! 
+                                    Hi, I'm Hugo Derré, a Front-End Developper. <br/>I spend my time to script and animate things with passion !<br/>
+                                    </p><hr></hr><p>Recently, I discovered React, and i love this ! This portfolio is an exercise to practice it.
+                                    Also, I maked applications that you can see below. 
                                 </p>
                             </div>
                             
