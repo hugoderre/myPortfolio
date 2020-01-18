@@ -86,7 +86,7 @@ function Card(props) {
 
 export default function Projects() {
     return (
-        <section data-aos="fade-left" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
+        <section data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
             <h2 className="text-center text-white sections-title">Projects</h2><hr></hr>
             <div className="row project-container">
                 {projectsData.map((project, index) =>
