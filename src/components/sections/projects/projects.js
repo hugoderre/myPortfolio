@@ -68,7 +68,7 @@ const projectsData = [
 function Card(props) {
     return (
         
-        <div className="col-lg-3 col-md-4 col-sm-6 col-6">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-6 project-col">
             <div className="hovereffect img-projects-wrapper" data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="center">
                 <img src={props.data.srcImg} alt="" />
                 <div className="overlay">
@@ -86,7 +86,7 @@ function Card(props) {
 
 export default function Projects() {
     return (
-        <section data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="center" className="container projects-container" name="projects">
+        <section data-aos="fade-down" data-aos-once="true" data-aos-anchor-placement="center" className="container main-projects-container" name="projects">
             <h2 className="text-center text-white sections-title">Projects</h2><hr></hr>
             <div className="row project-container">
                 {projectsData.map((project, index) =>

@@ -15,7 +15,6 @@ export default class Contact extends Component {
         const { email, subject, message } = this.state
         let templateParams = {
             from_name: email,
-            // to_name: '<YOUR_EMAIL_ID>',
             subject: subject,
             message_html: message,
         }

@@ -36,9 +36,9 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background : url("../../../img/photocv.png");
+    background : url("../../../img/photocv.jpg");
     background-position: center ;
-    background-size:180px 250px ;
+    background-size:218px 290px ;
     -webkit-transform : skewY(-30deg) rotate3d(0, 0, 1, 60deg);
     -ms-transform : skewY(-30deg) rotate3d(0, 0, 1, 60deg);
     transform : skewY(-30deg) rotate3d(0, 0, 1, 60deg);

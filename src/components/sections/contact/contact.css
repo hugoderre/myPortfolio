@@ -92,4 +92,7 @@
 .form-control::placeholder , .md-textarea::placeholder {
     color:white!important;
 }
+.form-control {
+    color:white!important;
+}
 
